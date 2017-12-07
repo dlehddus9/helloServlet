@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;
 public class PetOwner {
 
 	@Autowired //wiring by type
-	@Qualifier(value="qf_dog")
+	@Qualifier(value="qf_cat")
 	private AnimalType animal;
 	
 	public void play() {
