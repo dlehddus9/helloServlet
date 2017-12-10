@@ -1,0 +1,52 @@
+@charset "EUC-KR";
+
+.formtable { 
+	width: 500px; 
+	border: 1px solid black; 
+	border-style: solid; 
+	color: white;
+	background: black;
+	text-align: center;
+}
+
+.formtable th {
+	background: #0877D3;
+	color: white;
+	padding: 10px;
+}
+
+.formtable tr, td {
+	background: white;
+	padding: 5px;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+	text-align: center;
+}
+
+a:hover {
+	color: blue;
+}
+
+a.home{
+	color: #0877D3;
+	text-decoration: none;
+	text-align: left;
+}
+
+a.home:hover {
+	color: #0100FF;
+}
+
+fieldset {
+	border: 1px solid black
+}
+.login{
+	background-color:white;
+	margin: 3em auto; 
+	width:400px; 
+	border-radius:10px;
+	border:2px solid darkgray;
+}
