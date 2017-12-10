@@ -4,6 +4,8 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -17,9 +19,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller // component 를 사용하면 밑에 애들 bean 에 등록해줌
 public class HomeController {
 
+	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	//
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String showHome(Locale locale, Model model) {
+	public String showHome(HttpServletRequest request, Locale locale, Model model) {
 
+		logger.info("info level: Welcome home! The client locale is {}",locale);
+		
+		String url= request.getRequestURL().toString();
+		String clientIPaddress = request.getRemoteAddr();
+		logger.info("Requst URL :" +url);
+		logger.info("Client IP :" +clientIPaddress);
+		
 		return "home";
 	}
 
